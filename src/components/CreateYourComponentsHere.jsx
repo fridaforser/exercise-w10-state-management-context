@@ -1,11 +1,14 @@
-import React from "react";
+import { useTheme } from "../contexts/ThemeContext.jsx";
+
 
 export const CreateYourComponentsHere = () => {
+const { theme, toggleTheme } = useTheme()
+
+
   return (
     <div>
-      This is just a component to upload to github to include the components
-      folder since if no file is stored in the folder, the github repo won't
-      upload it.
+      <button onClick={toggleTheme}>Choose theme</button>
+      <p>{theme}</p>
     </div>
   );
 };
